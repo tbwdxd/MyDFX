@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/top_parent"
-    tools:context=".MainActivity">
+    tools:context="com.dfx.mydfx.MainActivity">
 
 
 
@@ -19,8 +19,26 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <include layout="@layout/app_bar_main"
-        android:id="@+id/appbar"/>
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+        <include
+            android:id="@+id/appbar"
+            layout="@layout/app_bar_main"
+            />
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include
+                android:id="@+id/replacefrag"
+                layout="@layout/content_main"
+                />
+        </FrameLayout>
+
+    </LinearLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
@@ -33,6 +51,7 @@
         android:background="@color/blue"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer"/>
+
 
 
 

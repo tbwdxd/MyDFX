@@ -18,12 +18,6 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".mainpage">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ManualActivity" />
         <activity
             android:name=".MainActivity"
             android:label=""
